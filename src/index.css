@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary-clr: #000;
+  --text-clr: #fff;
+}
+body {
+  margin: 0;
+  padding: 1rem 8rem;
+  font-family: "Manrope", sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
+}
+nav {
+  gap: 5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-clr);
+  color: var(--text-clr);
+  display: flex;
+  z-index: 99;
+  height: 100vh;
+  transition: all 0.5s cubic-bezier(0.93, 0.18, 0.6, 0.98);
+  padding: 5rem;
+  transform: translateX(100vw);
+  cursor: url(./assets/cross.png), pointer;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > ul {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+}
+.linkli:nth-child(1)::before {
+  content: none;
+}
+.linkli:nth-child(2)::before {
+  content: none;
+}
+.linkli:nth-child(3)::before {
+  content: none;
+}
+
+header > ul > li > a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+.nav-btn {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 999;
+  transition: all ease-in 0.1s;
+}
+.nav-btn:focus + .nav {
+  transform: translateX(0) !important;
+}
+.nav-btn:hover {
+  cursor: pointer;
+  gap: 9px;
+}
+.nav-btn-line {
+  width: 1rem;
+  height: 2px;
+  background-color: #000;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+ul > li {
+  font-size: 4rem;
+  font-weight: 500;
+  transition: all 0.4s;
+  letter-spacing: -1px;
+}
+ul > li:hover {
+  cursor: pointer;
+  transform: translateX(-0.5rem);
+}
+ul > li:nth-child(1)::before {
+  content: "01";
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+ul > li:nth-child(2)::before {
+  content: "02";
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+ul > li:nth-child(3)::before {
+  content: "03";
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+ul > li:nth-child(4)::before {
+  content: "04";
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+ul > li:focus {
+  transform: scale(0.8);
+}
+.primary-btn {
+  background-color: rgb(55, 55, 233);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+h1 {
+  letter-spacing: -1px;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+h4 {
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+.contact-info {
+  max-width: 40%;
+}
+.intro > h3:hover {
+  cursor: pointer;
+}
+.tiny-list > li {
+  font-size: 2rem;
+}
+.footer-list > li {
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+.footer-list > li:nth-child(1)::before {
+  content: none;
+}
+.footer-list > li:nth-child(2)::before {
+  content: none;
+}
+.footer-list > li:nth-child(3)::before {
+  content: none;
+}
+.footer-list > li:nth-child(4)::before {
+  content: none;
+}
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer-list > li:hover {
+  transform: none;
+}
+.success {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.success > img {
+  width: 7rem;
+  margin: 0 auto;
+}
+.success > h4 {
+  margin: 1rem auto;
+}
+.success > p {
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.date {
+  font-weight: 600;
+}
+.green-btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 24px;
+  background-color: rgb(55, 219, 143);
+  width: fit-content;
+  margin: 0 auto;
+}
+.cursor {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  background-color: #fff;
+  z-index: 9999999;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+.hero {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 15rem;
+}
+.title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+.subtitle {
+  color: #b8b8b8;
+  letter-spacing: 0;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+.map {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-title {
+  font-weight: 700;
+  font-family: "Satoshi", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+.info {
+  width: 25rem;
+}
+.tiny-title {
+  margin: 1rem 0;
+}
+.tiny-subtitle {
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  margin-top: 0;
+}
+.card {
+  width: auto;
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.card-container {
+  margin: 15rem 0;
+  display: flex;
+  gap: 2rem;
+}
+.banner {
+  background-color: rgb(55, 55, 233);
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.banner-title {
+  font-size: 3rem;
+  margin: auto;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -2px;
+}
+.secondary-btn {
+  background-color: white;
+  color: rgb(55, 55, 233);
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+  width: fit-content;
+  margin-top: 2rem;
+}
+.banner-head {
+  display: flex;
+}
+footer {
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+footer > ul {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+}
+.linkli:nth-child(1)::before {
+  content: none;
+}
+.linkli:nth-child(2)::before {
+  content: none;
+}
+.linkli:nth-child(3)::before {
+  content: none;
+}
+
+footer > ul > li > a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #1f1f1f;
+  padding-top: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.apply-btn {
+  padding: 0.5rem 1rem;
+  background-color: rgb(55, 55, 233);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+}
+.schemebox {
+  padding: 1.5rem;
+  background-color: #1f1f1f;
+  border-radius: 1rem;
+}
+.schemehead {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.scheme-title {
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+.schemes {
+  display: flex;
+  gap: 1rem;
+}
+.scheme-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.margin-low {
+  margin-bottom: 2rem;
+}
+
+.event {
+  background-color: #1f1f1f;
+  border-radius: 1rem;
+}
+
+.event-info {
+  margin: 2rem;
+}
+.event:hover {
+  cursor: pointer;
+}
